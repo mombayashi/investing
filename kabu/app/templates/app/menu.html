@@ -1,0 +1,52 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+  <!-- Services -->
+  <section class="page-section" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">使用方法</h2>
+          <h3 class="section-subheading text-muted">このサイトの処理の流れを示します</h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">モデルの学習</h4>
+            <p class="text-muted">
+                過去5年分のデータを使って株価予測モデルを構築する<BR>
+                学習したモデルをファイルに保存しDjangoサイトに置く
+            </p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">最新３０日分の株価データ取得</h4>
+            <p class="text-muted">
+                スクレイピングプログラムを実行しサイトから３０日分のデータを取得する<BR>
+                取得したファイルをdata.csvとしてDjangoサイトに置く
+            </p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="service-heading">株価の予測</h4>
+          <p class="text-muted">
+            予測ページへ移動する<BR>
+            学習モデルを実行し、data.csvを読み込み次の日の予測値を計算する<BR>            
+            結果をウェブページに表示する<BR>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}

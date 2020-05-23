@@ -1,0 +1,53 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+{% load static %}
+<!-- Team -->
+<section class="bg-light page-section" id="prediction">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">予測結果</h2>
+          <h3 class="section-subheading text-muted">銘柄Aの明日の株価を予測します</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="team-member">
+            {% if higher %}
+            <img class="mx-auto rounded-circle" src='{% static "app/img/up.png" %}' alt="">
+            {% else %}
+            <img class="mx-auto rounded-circle" src='{% static "app/img/down.png" %}' alt="">
+            {% endif %}
+            <h4>銘柄A</h4>
+            <p class="text-muted">{{ predicted }}(現在：{{ last }})</p>
+          </div>
+        </div>
+        <!--
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src='{% static "app/img/up.png" %}' alt="">
+            <h4>銘柄B</h4>
+            <p class="text-muted">2000</p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src='{% static "app/img/down.png" %}' alt="">
+            <h4>銘柄C</h4>
+            <p class="text-muted">3000</p>
+          </div>
+        </div>
+      -->
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <p class="large text-muted">このサイトは予測値について何の責任も持ちません
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}
+
